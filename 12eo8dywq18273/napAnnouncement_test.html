@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>获取绝区零公告</title>
+	<link rel="shortcut icon" href="" />
+	<link rel="bookmark" href="https://img.moyujun.top/ico/fbimayo.ico" />
+	<link rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/5.1.0/github-markdown.min.css">
+	<style>
+		/* 用于全屏显示的样式 */
+		#fullscreenContainer {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: white;
+			z-index: 1000;
+			display: none;
+		}
+
+		/* 用于关闭全屏的样式 */
+		#fullscreenIframe {
+			width: 100%;
+			height: calc(100% - 30px);
+			/* 减去按钮的高度 */
+			border: none;
+		}
+
+		.home__close {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 30px;
+			background-color: #f1f1f1;
+			text-align: center;
+			line-height: 30px;
+			cursor: pointer;
+		}
+
+		.markdown-body {
+			margin: 30px;
+		}
+
+		/* 高级选项初始隐藏 */
+		.advanced-options {
+			display: none;
+		}
+	</style>
+	<script>
+		function toggleFullscreen() {
+            // 获取勾选框的状态
+            var uidinput = document.getElementById('uid_input').value;
+            var levelinput = document.getElementById('level_input').value;
+
+            // 构建新的API URL
+            var apiUrl = "https://webstatic.mihoyo.com/nap/announcement/index.html";
+            apiUrl += "?auth_appid=announcement&authkey_ver=1&bundle_id=nap_cn&channel_id=1&game=nap&game_biz=nap_cn&lang=zh-cn&platform=pc&sdk_presentation_style=fullscreen&sdk_screen_transparent=true&sign_type=2";
+            apiUrl += "&region=prod_cb01_cn";
+            apiUrl += "&uid=" + uidinput;
+            apiUrl += "&level=" + levelinput;
+
+            // 获取全屏容器和iframe元素
+            var fullscreenContainer = document.getElementById("fullscreenContainer");
+            var iframeElement = document.getElementById("fullscreenIframe");
+
+            // 设置iframe的src属性
+            iframeElement.src = apiUrl;
+
+            // 显示全屏容器
+            fullscreenContainer.style.display = "block";
+        }
+
+        function closeFullscreen() {
+            // 获取全屏容器
+            var fullscreenContainer = document.getElementById("fullscreenContainer");
+
+            // 隐藏全屏容器
+            fullscreenContainer.style.display = "none";
+
+            // 重置iframe的src属性
+            var iframeElement = document.getElementById("fullscreenIframe");
+            iframeElement.src = "";
+        }
+
+        function toggleAdvancedOptions() {
+            // 获取高级选项元素
+            var advancedOptions = document.getElementById("advancedOptions");
+
+            // 切换显示状态
+            if (advancedOptions.style.display === "block") {
+                advancedOptions.style.display = "none";
+            } else {
+                advancedOptions.style.display = "block";
+			}
+
+			if (showLess.style.display === "none") {
+				showLess.style.display = "block";
+			} else {
+				showLess.style.display = "none"
+            }
+        }
+
+        function toggleShowLess() {
+            // 获取显示更少公告的勾选框和等级输入框
+            var showLessCheckbox = document.getElementById("showLessCheckbox");
+            var levelInput = document.getElementById("level_input");
+
+            // 切换勾选状态
+            if (showLessCheckbox.checked) {
+                levelInput.value = 0;
+            } else {
+                levelInput.value = 1;
+            }
+        }
+	</script>
+</head>
+
+<body class="markdown-body" inmaintabuse="1">
+	<h2>获取绝区零公告</h2>
+	<h3>Made by FBIMAYO@已格式化 × moyujun feat. C**tG*T<br>请注意：关闭公告后，如需重新打开公告，请刷新页面。</h3>
+
+	<!-- 高级选项勾选开关 -->
+	<label>
+        <input type="checkbox" onchange="toggleAdvancedOptions()"> 高级选项
+    </label>
+
+	<label id="showLess">
+            <input type="checkbox" id="showLessCheckbox" onchange="toggleShowLess()"> 显示更少公告
+        </label>
+	<!-- 显示更少公告勾选框 -->
+	<div id="advancedOptions" class="advanced-options">
+
+		<!-- Debug按钮 -->
+		<p><b>??? - channel_id = </b><select><option>1</option></select></p>
+		<p><b>uid = </b><input id="uid_input" type="number" maxlength="6" minlength="6" value="123456"></input></p>
+		<p><b>等级 - level = </b><input id="level_input" type="number" value="1"></input></p>
+		<p><b>语言 - lang = </b><select><option>zh-cn</option></select></p>
+		<p><b>平台 - platform = </b><select><option>pc</option></select></p>
+		<p><b>服务器 - region = </b><select id="region_select"><option value="prod_cb01_cn">prod_cb01_cn</option><option value="prod_cb02_cn">prod_cb02_cn</option></select></p>
+		<p><b>??? - sdk_presentation_style = </b><select><option>fullscreen</option></select></p>
+		<details><summary>我该如何填入参数？</summary>
+		<p>channel_id：疑似为打开公告后默认选择的栏目，但实际测试无效。目前认为该参数无任何作用。</p>
+		<p>uid：顾名思义。这里需要您填入一个1或2开头的、六位数的UID，本网页已为您自动填入“123456”，因此您可以直接点击查询公告。</p>
+		<p>level：您的游戏等级。当level填入0时，将获得在登录游戏页面能查阅的公告。目前绝区零二测并没有登录游戏前可查阅的公告。如果只填入正整数level而不填入一个有效的UID，也不会显示全部公告。</p>
+		<p>lang：语言。本站仅提供国服的公告查询，而国服的API仅支持zh-cn即简体中文语言。</p>
+		<p>platform：游戏平台。对公告的显示似乎没有影响。</p>
+        <p>region：服务器。绝区零二测提供了两个服务器，因此我们将可以在这两个服务器的代号中进行选择。</p>
+        <p>sdk_presentation_style：似乎是一个控制全屏的参数。这不是绝区零游戏，我们无法得知其真实用处。</p>
+		</details>
+	</div>
+
+	<button onclick="toggleFullscreen()">获取</button>
+    <h3>叠甲：点击上方“获取”按钮后显示的内容为绝区零官方的公告页面，您可以在公告上右键查看框架源代码以得知该公告页面的链接。公告页面信息收集与缓存（如有）由米哈游进行，跟我们（FBIMAYO × moyujun feat. C**tG*T）没有关系。如果你账号被盗了，就去找米哈游，别找我们麻烦。本站不收集您的任何信息，如果还不相信，你就直接查看本页源代码吧。如果怕自己看公告导致自己账号被盗之类的，就别看公告了呗~<br>…看公告真的能泄露自己的个人信息吗？</h3>
+	<!-- 全屏容器 -->
+	<div id="fullscreenContainer">
+		<!-- iframe元素，用于显示网页内容 -->
+		<iframe id="fullscreenIframe" class="fullscreenIframe" frameborder="0"></iframe>
+	</div>
+</body>
+
+</html>

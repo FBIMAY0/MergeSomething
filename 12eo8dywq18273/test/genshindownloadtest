@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Downloads for Genshin Impact</title>
+	<meta name="generator" content="VuePress 1.9.7">
+	<link rel="icon" href="/resources/icons/icon-head.png">
+	<meta name="description" content="">
+	<meta name="robots" content="noindex">
+
+	<link rel="stylesheet" href="https://fbimayo{$rthSuffix}/genshin/assets/download_style.css">
+</head>
+
+<body>
+	<div id="app" data-server-rendered="true">
+		<div class="theme-container">
+			<header class="navbar">
+				<div class="sidebar-button">
+						<path fill="currentColor"
+							d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z">
+						</path>
+					</svg></div> <a href="/" aria-current="page"
+					class="home-link router-link-exact-active router-link-active">
+					<span class="site-name can-hide">Downloads for Genshin Impact</span></a>
+				<div class="links">
+					<div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value="">
+						<!---->
+					</div>
+					<!---->
+				</div>
+			</header>
+			<div class="sidebar-mask"></div>
+			<aside class="sidebar">
+				<!---->
+				<ul class="sidebar-links">
+					<li><a href="/" aria-current="page" class="active sidebar-link">Downloads for Genshin Impact</a>
+						<ul class="sidebar-sub-headers">
+							<li class="sidebar-sub-header"><a href="/genshin/download/#1.0" class="sidebar-link">1.0</a></li>
+
+						</ul>
+					</li>
+					<li><a href="https://fbimayo{$rthSuffix}/genshin/download/hdiff" aria-current="page" class="sidebar-link">Downloads for Genshin Impact hdiffs</a>
+						<ul class="sidebar-sub-headers">
+							
+
+						</ul>
+					</li>
+					
+			</aside>
+			<main class="page">
+				<div class="theme-default-content content__default">
+					<h1 id="「纯净的音游下载站」"><a href="Downloads for Genshin Impact" class="header-anchor">#</a> Downloads for Genshin Impact
+					</h1>
+
+					<details class="custom-block details">
+						<summary>说明</summary>
+						<ol start="0">
+							<p>* 1.0~1.5版本的语音包都是跟本体在一起的，别问我了呜呜呜</p>
+							<p>* 仅提供国服、PC端包体下载，才不是因为我外服懒得找（</p>
+							<p>* 链接由 摸鱼菌 倾情提供！</p>
+							<p>* 您还可以<a href="https://moyujun.top">点我前往摸鱼菌的主页！</a></p>
+							<p>* 如果<a href="https://download.moyujun.top/YuanShen/CN/">这个网址</a>有新下载地址了我这还没更新，请【【狠狠】】地叫我更新！</p>
+							<p>* 如果你不会访问 <a href="https://ys.mihoyo.com/">https://ys.mihoyo.com/</a> 的话，请尝试进行<a href="https://ys-api.mihoyo.com/event/download_porter/link/ys_cn/official/pc_default">国服启动器下载</a>。</p>
+							<p>* 如果你不会访问 <a href="https://genshin.hoyoverse.com/">https://genshin.hoyoverse.com/</a> 的话，请尝试进行<a href="https://sg-public-api.hoyoverse.com/event/download_porter/link/ys_global/genshinimpactpc/default">外服启动器下载</a>。</p>
+							<p>* 另外，上面的两个网址是可以点的</p>
+							<p>* 安卓手机还可以进行：<a href="https://ys-api.mihoyo.com/event/download_porter/link/ys_cn/official/android_default">国服安装包下载</a>，或<a href="https://play.google.com/store/apps/details?id=com.miHoYo.GenshinImpact">（需翻墙）从Google Play下载外服</a></p>
+							<p>* 如果你不会打开 App Store 的话，请到<a href="https://ys-api.mihoyo.com/event/download_porter/link/ys_cn/official/ios_default">国服 APP 页面</a>下载；如果你有外区 Apple ID 的话，你还可以去<a href="https://apps.apple.com/app/id1517783697">外服 APP 页面</a>下载。</p>
+						</ol>
+					</details>
+					
+<h2>1.0</h2>
+<p><a href="https://autopatchcn.yuanshen.com/client_app/pc_mihoyo/04874b5ed14055383219644f40b514ca/YuanShen_1.0.0.zip">原神 1.0.0 完整包</a></p>
+<p><a href="https://autopatchcn.yuanshen.com/client_app/pc_mihoyo/20201013_f0953d8d130df56f/YuanShen_1.0.1.zip">原神 1.0.1 完整包</a></p>
+<h2>1.1</h2>
+<p><a href="https://autopatchcn.yuanshen.com/client_app/pc_mihoyo/20201111_bc67429d0c160eff/YuanShen_1.1.0.zip">原神 1.1 完整包</a></p>
+<h2>1.2</h2>
+<p><a href="https://autopatchcn.yuanshen.com/client_app/pc_mihoyo/20201223_267c0ad2673e87a2/YuanShen_1.2.0.zip">原神 1.2 完整包</a></p>
+		<h2>1.3</h2>
+<p><a href="https://autopatchcn.yuanshen.com/client_app/pc_mihoyo/20210203_e24bc564fc91a013/YuanShen_1.3.0.zip">原神 1.3.0 完整包</a></p>
+<p><a href="https://autopatchcn.yuanshen.com/client_app/pc_mihoyo/20210210_78f8a53c55c370fc/YuanShen_1.3.2.zip">原神 1.3.2 完整包</a></p>
+		<h2>1.4</h2>
+<p><a href="https://autopatchcn.yuanshen.com/client_app/pc_mihoyo/20210317_67c8f1002bb26672/YuanShen_1.4.0.zip">原神 1.4 完整包</a></p>
+		<h2>1.5</h2>
+<p><a href="https://autopatchcn.yuanshen.com/client_app/pc_mihoyo/20210428_4f4c4896195a34be/YuanShen_1.5.0.zip">原神 1.5.0 本体</a></p>
+
+<p>原神 1.5.0 语音包：<a href="https://autopatchcn.yuanshen.com/client_app/pc_mihoyo/20210428_4f4c4896195a34be/Audio_Chinese_1.5.0.zip">汉语</a> <a href="https://autopatchcn.yuanshen.com/client_app/pc_mihoyo/20210428_4f4c4896195a34be/Audio_English(US)_1.5.0.zip">英语</a> <a href="https://autopatchcn.yuanshen.com/client_app/pc_mihoyo/20210428_4f4c4896195a34be/Audio_Japanese_1.5.0.zip">日语</a> <a href="https://autopatchcn.yuanshen.com/client_app/pc_mihoyo/20210428_4f4c4896195a34be/Audio_Korean_1.5.0.zip">韩语</a> </p>
+
+<p><a href="https://autopatchcn.yuanshen.com/client_app/pc_mihoyo/20210430_ecaaf3c411f5f79f/YuanShen_1.5.1.zip">原神 1.5.1 本体</a></p>
+
+<p>原神 1.5.1 语音包：<a href="https://autopatchcn.yuanshen.com/client_app/pc_mihoyo/20210430_ecaaf3c411f5f79f/Audio_Chinese_1.5.1.zip">汉语</a> <a href="https://autopatchcn.yuanshen.com/client_app/pc_mihoyo/20210430_ecaaf3c411f5f79f/Audio_English(US)_1.5.1.zip">英语</a> <a href="https://autopatchcn.yuanshen.com/client_app/pc_mihoyo/20210430_ecaaf3c411f5f79f/Audio_Japanese_1.5.1.zip">日语</a> <a href="https://autopatchcn.yuanshen.com/client_app/pc_mihoyo/20210430_ecaaf3c411f5f79f/Audio_Korean_1.5.1.zip">韩语</a> </p>
+
+<h2>1.6</h2>
+<p><a href="https://autopatchcn.yuanshen.com/client_app/pc_mihoyo/20210609_cda4068353f840c3/YuanShen_1.6.0.zip">原神 1.6</a></p>
+<p>原神 1.6 语音包：<a href="https://autopatchcn.yuanshen.com/client_app/pc_mihoyo/20210609_cda4068353f840c3/Audio_Chinese_1.6.0.zip">汉语</a> <a href="https://autopatchcn.yuanshen.com/client_app/pc_mihoyo/20210609_cda4068353f840c3/Audio_English(US)_1.6.0.zip">英语</a> <a href="https://autopatchcn.yuanshen.com/client_app/pc_mihoyo/20210609_cda4068353f840c3/Audio_Japanese_1.6.0.zip">日语</a> <a href="https://autopatchcn.yuanshen.com/client_app/pc_mihoyo/20210609_cda4068353f840c3/Audio_Korean_1.6.0.zip">韩语</a> </p>
+
+<h2>2.0</h2>
+<p><a href="https://autopatchcn.yuanshen.com/client_app/pc_mihoyo/20210721_3aacc245ccfe47c7/YuanShen_2.0.0.zip">原神 2.0</a></p>
+<p><a href="https://fbimayo{$rthSuffix}/genshin/download/audio/2.0.0.html">原神 2.0 四国语音包</a></p>
+
+<h2>2.1</h2>
+<p><a href="https://autopatchcn.yuanshen.com/client_app/pc_mihoyo/20210901_859f700f6ec7a8a3/YuanShen_2.1.0.zip">原神 2.1</a></p>
+
+<p><a href="https://fbimayo{$rthSuffix}/genshin/download/audio/2.1.0.html">原神 2.1 四国语音包</a></p>
+
+<h2>2.2</h2>
+<p><a href="https://autopatchcn.yuanshen.com/client_app/pc_mihoyo/20211013_a336065295309dbe/YuanShen_2.2.0.zip">原神 2.2</a></p>
+
+<p><a href="https://fbimayo{$rthSuffix}/genshin/download/audio/2.2.0.html">原神 2.2 四国语音包</a></p>
+
+<h2>2.3</h2>
+<p><a href="https://autopatchcn.yuanshen.com/client_app/download/pc_zip/20211117173857_8JkfDHNPmqKi67qR/YuanShen_2.3.0.zip">原神 2.3</a></p>
+
+<p><a href="https://fbimayo{$rthSuffix}/genshin/download/audio/2.3.0.html">原神 2.3 四国语音包</a></p>
+
+<h2>2.4</h2>
+<p><a href="https://autopatchcn.yuanshen.com/client_app/download/pc_zip/20211225041652_jkpmdQVLf6h0xFBk/YuanShen_2.4.0.zip">原神 2.4</a></p>
+
+<p><a href="https://fbimayo{$rthSuffix}/genshin/download/audio/2.4.0.html">原神 2.4 四国语音包</a></p>
+
+<h2>2.5</h2>
+<p><a href="https://autopatchcn.yuanshen.com/client_app/download/pc_zip/20220125104630_obObq2oqPuPFT2Zt/YuanShen_2.5.0.zip">原神 2.5</a></p>
+
+<p><a href="https://fbimayo{$rthSuffix}/genshin/download/audio/2.5.0.html">原神 2.5 四国语音包</a></p>
+
+<h2>2.6</h2>
+<p><a href="https://autopatchcn.yuanshen.com/client_app/download/pc_zip/20220318210005_l9zBcCngXHqIrxpk/YuanShen_2.6.0.zip">原神 2.6</a></p>
+
+<p><a href="https://fbimayo{$rthSuffix}/genshin/download/audio/2.6.0.html">原神 2.6 四国语音包</a></p>
+
+<h2>2.7</h2>
+<p><a href="https://autopatchcn.yuanshen.com/client_app/download/pc_zip/20220510122739_htkJy9BIys9tCMHu/YuanShen_2.7.0.zip">原神 2.7</a></p>
+
+<p><a href="https://fbimayo{$rthSuffix}/genshin/download/audio/2.7.0.html">原神 2.7 四国语音包</a></p>
+
+<h2>2.8</h2>
+<p><a href="https://autopatchcn.yuanshen.com/client_app/download/pc_zip/20220625003700_3RiwWggLSQ14iInN/YuanShen_2.8.0.zip">原神 2.8</a></p>
+
+<p><a href="https://fbimayo{$rthSuffix}/genshin/download/audio/2.8.0.html">原神 2.8 四国语音包</a></p>
+
+<h2>3.0</h2>
+<p><a href="https://autopatchcn.yuanshen.com/client_app/download/pc_zip/20220815143702_i3RDKzdbDWGYYfZZ/YuanShen_3.0.0.zip">原神 3.0</a></p>
+
+<p><a href="https://fbimayo{$rthSuffix}/genshin/download/audio/3.0.0.html">原神 3.0 四国语音包</a></p>
+
+<h2>3.1</h2>
+<p><a href="https://autopatchcn.yuanshen.com/client_app/download/pc_zip/20220917165328_rVH9t4OWduSD75ye/YuanShen_3.1.0.zip">原神 3.1</a></p>
+
+<p><a href="https://fbimayo{$rthSuffix}/genshin/download/audio/3.1.0.html">原神 3.1 四国语音包</a></p>
+
+<h2>3.2</h2>
+<p><a href="https://autopatchcn.yuanshen.com/client_app/download/pc_zip/20221024103540_fp3L3cHoDpo9eNeT/YuanShen_3.2.0.zip">原神 3.2</a></p>
+
+<p><a href="https://fbimayo{$rthSuffix}/genshin/download/audio/3.2.0.html">原神 3.2 四国语音包</a></p>
+
+<h2>3.3 [114514人选择了]</h2>
+<p><a href="https://autopatchcn.yuanshen.com/client_app/download/pc_zip/20221128113626_LSJsjaUDgixXmWnd/YuanShen_3.3.0.zip">原神 3.3【11.4514%的人选择了】</a></p>
+
+<p><a href="https://fbimayo{$rthSuffix}/genshin/download/audio/3.3.0.html">原神 3.3 四国语音包【19.19810%的人选择了】</a></p>
+					
+					
+      
+    </span>
+						</p>
+					</div>
+			</main>
+		</div>
+		<div class="global-ui">
+			<!---->
+		</div>
+	</div>
+</body>
+
+</html>
+
+
+
+
+
+
+</body>

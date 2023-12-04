@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>公告信息</title>
+    <script>
+        function updateApiLevel() {
+            // 获取勾选框的状态
+            var checkBox = document.getElementById("lessAnnouncementCheckbox");
+            var debugCheckBox = document.getElementById("debugCheckbox");
+            var apiLevel = checkBox.checked ? 0 : 1;
+
+            // 构建新的API URL
+            var apiUrl = "https://api-takumi.mihoyo.com/common/nap_cn/announcement/api/getAnnContent";
+            apiUrl += "?level=" + apiLevel;
+            apiUrl += "&game=nap&game_biz=nap_cn&lang=zh-cn&auth_appid=announcement&authkey_ver=1&bundle_id=nap_cn&channel_id=1&platform=pc&region=prod_cb01_cn&sdk_presentation_style=fullscreen&sdk_screen_transparent=true&sign_type=2&uid=123456";
+
+            // 显示Debug信息
+            if (debugCheckBox.checked) {
+                var debugInfoContainer = document.getElementById("debugInfoContainer");
+                debugInfoContainer.innerText = "API请求地址：" + apiUrl;
+            }
+
+            // 发送API请求
+            fetch(apiUrl)
+                .then(response => response.json())
+                .then(data => {
+                    // 处理返回的数据
+                    console.log(data);
+
+                    // 在页面上显示返回的内容
+                    var resultContainer = document.getElementById("resultContainer");
+                    resultContainer.innerText = JSON.stringify(data, null, 2);
+                })
+                .catch(error => console.error('Error:', error));
+        }
+    </script>
+</head>
+<body>
+    <h1>公告信息</h1>
+    <label for="lessAnnouncementCheckbox">获取更少公告</label>
+    <input type="checkbox" id="lessAnnouncementCheckbox">
+    
+    <label for="debugCheckbox">Debug</label>
+    <input type="checkbox" id="debugCheckbox">
+    
+    <button onclick="updateApiLevel()">获取信息</button>
+    
+    <!-- 用于显示API返回内容的容器 -->
+    <div id="resultContainer"></div>
+    
+    <!-- 用于显示Debug信息的容器 -->
+    <div id="debugInfoContainer"></div>
+</body>
+</html>

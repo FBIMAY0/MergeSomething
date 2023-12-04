@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- 用HTML先写好输出格式即样式 -->
+  <h2>2022年已经过去了 <span id="d"></span> 天 <span id="h"></span> 时 <span id="m"></span> 分 <span id="s"></span> 秒！</h2>
+
+
+  <script>
+    //调用Date相关函数和设置定时器(setInterval();)，来实现倒计时功能；
+   var d = document.getElementById('d');
+   var h = document.getElementById('h');
+   var m = document.getElementById('m');
+   var s = document.getElementById('s');   /* 通过dome操作来找到相应元素，  根据id的值来找元素；此时会根据 id 值来拿到 html 中的 span 标签的位置，然后再往里面添加相关的信息； */
+
+   var endTime = new Date('2022/01/01 00:00:00');  //获取目标的日期值为： 2021/11/11   00:00:00;
+   setInterval(function(){
+     var now = new Date(); //获取现在电脑上的日期值； 如：2021/5/21  20:37:35 等信息；
+     var diff = now.getTime() - endTime.getTime(); // 现在到目标时间距离的毫秒数   get.time()作用是获取从1970/1/1到某一时间点的毫秒数；
+     diff = parseInt(diff/1000);     //将毫秒数换算成秒数；
+     var days = parseInt(diff/(24*3600))//获取天数；
+     var hours = parseInt(diff%(24*3600)/3600);//获取小时；
+     var minutes = parseInt(diff%3600/60);//获取分钟；
+     var seconds = diff%60;//获取秒数；
+
+     d.innerHTML = days;   // d.innerHTML 的作用就是：将 day 的值添加到相应的 id 标签中；
+     h.innerHTML = hours;
+     m.innerHTML = minutes;
+     s.innerHTML = seconds;
+   },1000); //其中的 1000 指： 1000毫秒( 1s )自动刷新一次，这就造成了我们所看到的倒计时；
+
+
+  </script>
+</body>
+</html>

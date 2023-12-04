@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<title>错误：429</title>
+		<link rel="stylesheet" href="https://www.retiehe.com/css/error.css">
+	</head>
+	<body>
+		<div class="banner">
+			<h1>429</h1>
+		</div>
+		<div class="description">超出访问频率限制</div>
+		<p class="tip">如果点击刷新后仍然出现此错误，那么说明这是您的代码中存在无限循环导致的。请检查您的代码中使用 location.href 和 location.reload() 的部分。</p>
+		<footer>
+			<button id="refresh" onclick="location.reload()" disabled>刷新</button>
+		</footer>
+		<script>
+			setTimeout(function() {
+				refresh.disabled = false;
+			}, 2000);
+		</script>
+	</body>
+</html>

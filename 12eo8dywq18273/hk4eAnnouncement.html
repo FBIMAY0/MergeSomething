@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>获取原神公告</title>
+	<link rel="shortcut icon" href="" />
+	<link rel="bookmark" href="https://img.moyujun.top/ico/fbimayo.ico" />
+	<link rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/5.1.0/github-markdown.min.css">
+	<style>
+		/* 用于全屏显示的样式 */
+		#fullscreenContainer {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: white;
+			z-index: 1000;
+			display: none;
+		}
+
+		/* 用于关闭全屏的样式 */
+		#fullscreenIframe {
+			width: 100%;
+			height: calc(100% - 30px);
+			/* 减去按钮的高度 */
+			border: none;
+		}
+
+		.home__close {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 30px;
+			background-color: #f1f1f1;
+			text-align: center;
+			line-height: 30px;
+			cursor: pointer;
+		}
+
+		.markdown-body {
+			margin: 30px;
+		}
+
+		/* 高级选项初始隐藏 */
+		.advanced-options {
+			display: none;
+		}
+	</style>
+	<script>
+		function toggleFullscreen() {
+            // 获取勾选框的状态
+			var gameselect = document.getElementById('game_select').value
+			var gamebizselect = document.getElementById('game_biz_select').value
+			var regionselect = document.getElementById('region_select').value
+			var bundleselect = document.getElementById('bundle_select').value
+            var uidinput = document.getElementById('uid_input').value;
+            var levelinput = document.getElementById('level_input').value;
+			var langselect = document.getElementById('lang_select').value
+
+            // 构建新的API URL
+            var apiUrl = "https://webstatic.mihoyo.com/hk4e/announcement/index.html";
+            apiUrl += "?auth_appid=announcement&authkey_ver=1&channel_id=1&sdk_screen_transparent=true&sign_type=2&sdk_presentation_style=fullscreen";
+			apiUrl += "&game=" + gameselect;
+			apiUrl += "&game_biz=" + gamebizselect;
+            apiUrl += "&region=" + regionselect;
+            apiUrl += "&bundle=" + bundleselect;
+            apiUrl += "&uid=" + uidinput;
+            apiUrl += "&level=" + levelinput;
+            apiUrl += "&lang=" + langselect;
+
+            // 获取全屏容器和iframe元素
+            var fullscreenContainer = document.getElementById("fullscreenContainer");
+            var iframeElement = document.getElementById("fullscreenIframe");
+
+            // 设置iframe的src属性
+            iframeElement.src = apiUrl;
+
+            // 显示全屏容器
+            fullscreenContainer.style.display = "block";
+        }
+
+        function closeFullscreen() {
+            // 获取全屏容器
+            var fullscreenContainer = document.getElementById("fullscreenContainer");
+
+            // 隐藏全屏容器
+            fullscreenContainer.style.display = "none";
+
+            // 重置iframe的src属性
+            var iframeElement = document.getElementById("fullscreenIframe");
+            iframeElement.src = "";
+        }
+
+        function toggleAdvancedOptions() {
+            // 获取高级选项元素
+            var advancedOptions = document.getElementById("advancedOptions");
+
+            // 切换显示状态
+            if (advancedOptions.style.display === "block") {
+                advancedOptions.style.display = "none";
+            } else {
+                advancedOptions.style.display = "block";
+			}
+
+			if (showLess.style.display === "none") {
+				showLess.style.display = "block";
+			} else {
+				showLess.style.display = "none"
+            }
+			
+
+			if (showClgm.style.display === "none") {
+				showClgm.style.display = "block";
+			} else {
+				showClgm.style.display = "none"
+            }
+        }
+
+        function toggleShowLess() {
+            // 获取显示更少公告的勾选框和等级输入框
+            var showLessCheckbox = document.getElementById("showLessCheckbox");
+            var levelInput = document.getElementById("level_input");
+
+            // 切换勾选状态
+            if (showLessCheckbox.checked) {
+                levelInput.value = 0;
+            } else {
+                levelInput.value = 1;
+            }
+        }
+
+        function toggleClgm() {
+            // 获取显示更少公告的勾选框和等级输入框
+            var showClgmCheckbox = document.getElementById("showClgmCheckbox");
+            var gameSelect = document.getElementById("game_select");
+            var gamebizSelect = document.getElementById("game_biz_select");
+
+            // 切换勾选状态
+            if (showClgmCheckbox.checked) {
+                gameSelect.value = clgm;
+                gamebizSelect.value = clgm_cn;
+            } else {
+                gameSelect.value = hk4e;
+                gamebizSelect.value = hk4e_cn;
+            }
+        }
+	</script>
+</head>
+
+<body class="markdown-body" inmaintabuse="1">
+	<h2>获取原神公告</h2>
+	<h3>Made by FBIMAYO@已格式化 × moyujun feat. C**tG*T<br>请注意：关闭公告后，如需重新打开公告，请刷新页面。</h3>
+
+	<!-- 高级选项勾选开关 -->
+	<label>
+        <input type="checkbox" onchange="toggleAdvancedOptions()"> 高级选项
+    </label>
+
+	<label id="showLess">
+            <input type="checkbox" id="showLessCheckbox" onchange="toggleShowLess()"> 显示更少公告
+        </label>
+	<!-- 
+		<label id="showClgm">
+            <input type="checkbox" id="showClgmCheckbox" onchange="toggleClgm()"> 显示云原神公告
+        </label>
+		-->
+	<!-- 显示更少公告勾选框 -->
+	<div id="advancedOptions" class="advanced-options">
+
+		<!-- Debug按钮 -->
+		<p><b>游戏 - game = </b>
+		<select id="game_select">
+			<option value="hk4e">hk4e</option>
+			<option value="clgm">clgm</option>
+			</select>
+		</p>
+		<p><b>??? - game_biz = </b>
+		<select id="game_biz_select">
+			<option value="hk4e_cn">hk4e_cn</option>
+			<option value="clgm_cn">clgm_cn</option>
+			</select>
+		</p>
+		<p><b>服务器 - region = </b>
+		<select id="region_select">
+			<option value="cn_gf01">cn_gf01</option>
+			<option value="cn_qd01">cn_qd01</option>
+			<option value="os_asia">os_asia</option>
+			<option value="os_euro">os_euro</option>
+			<option value="os_usa">os_usa</option>
+			<option value="os_cht">os_cht</option>
+			</select>
+		</p>
+		<p><b>客户端 - bundle_id = </b>
+		<select id="bundle_select">
+			<option value="pc">pc</option>
+			<option value="ps">ps</option>
+			<option value="android">android</option>
+			</select>
+		</p>
+		<p><b>uid = </b><input id="uid_input" type="number" maxlength="9" minlength="9" value="123456789"></input></p>
+		<p><b>等级 - level = </b><input id="level_input" type="number" value="1"></input></p>
+		<p><b>语言 - lang = </b>
+		<select id="lang_select">
+			<option value="zh-cn">zh-cn - 简体中文</option>
+			<option value="zh-tw">zh-tw - 繁体中文</option>
+			<option value="en-us">en-us - 英语</option>
+			<option value="ja-jp">ja-jp - 日语</option>
+			<option value="ko-kr">ko-kr - 汉语</option>
+			<option value="es-es">es-es - 西班牙语</option>
+			<option value="fr-fr">fr-fr - 法语</option>
+			<option value="ru-ru">ru-ru - 俄语</option>
+			<option value="de-de">de-de - 德语</option>
+			<option value="pt-pt">pt-pt - 葡萄牙语</option>
+			<option value="id-id">id-id - 印度尼西亚语</option>
+			<option value="th-th">th-th - 泰语</option>
+			<option value="vi-vn">vi-vn - 越南语</option>
+			<option value="it-it">it-it - 意大利语</option>
+			<option value="tr-tr">tr-tr - 土耳其语</option>
+			</select>
+		</p>
+		<p><b>??? - sdk_presentation_style = </b><select><option>fullscreen</option></select></p>
+		<details>
+			<summary>我该如何填入参数？</summary>
+		</details>
+	</div>
+
+	<button onclick="toggleFullscreen()">获取</button>
+	<h3>叠甲：点击上方“获取”按钮后显示的内容为绝区零官方的公告页面，您可以在公告上右键查看框架源代码以得知该公告页面的链接。公告页面信息收集与缓存（如有）由米哈游进行，跟我们（FBIMAYO × moyujun feat.
+		C**tG*T）没有关系。如果你账号被盗了，就去找米哈游，别找我们麻烦。本站不收集您的任何信息，如果还不相信，你就直接查看本页源代码吧。如果怕自己看公告导致自己账号被盗之类的，就别看公告了呗~<br>…看公告真的能泄露自己的个人信息吗？
+	</h3>
+	<!-- 全屏容器 -->
+	<div id="fullscreenContainer">
+		<!-- iframe元素，用于显示网页内容 -->
+		<iframe id="fullscreenIframe" class="fullscreenIframe" frameborder="0"></iframe>
+	</div>
+</body>
+
+</html>

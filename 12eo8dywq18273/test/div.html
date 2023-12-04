@@ -1,0 +1,31 @@
+
+ 
+<!--html-->
+<div class="menu">点击此div 显示/隐藏</div>
+<div class="detail">
+   <div>---</div>
+   <div>控制此div的显示与隐藏</div>
+   <div>---</div>
+</div>
+ 
+ 
+<script>
+window.onload=function(){
+   var menus=document.querySelectorAll("div.menu");
+   var details=document.querySelectorAll("div.detail");
+   for(var i=0;i<menus.length;i++){
+      details[i].style.display="none";
+      menus[i].id=i;
+      menus[i].onclick=function(){
+         if(details[this.id].style.display=="none"){
+            details[this.id].style.display="block";
+            this.querySelector("i:nth-of-type(2)").className="fa fa-chevron-circle-up";
+         }else{
+            details[this.id].style.display="none";
+            this.querySelector("i:nth-of-type(2)").className="fa fa-chevron-circle-down";
+         }
+      }
+   }
+}
+</script>
+<script src="https://www.jq22.com/jquery/jquery-migrate-1.2.1.min.js"></script>
