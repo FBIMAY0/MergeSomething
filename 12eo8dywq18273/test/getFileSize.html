@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文件大小查询</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+
+    <h1>文件大小查询</h1>
+
+    <label for="fileUrl">输入文件链接:</label>
+    <input type="text" id="fileUrl" placeholder="在这里输入文件链接">
+
+    <button onclick="getFilesize()">查询文件大小</button>
+
+    <div id="result"></div>
+
+    <script>
+        function getFilesize() {
+            var fileUrl = document.getElementById("fileUrl").value;
+
+            // 发送HEAD请求获取文件大小信息
+            $.ajax({
+                type: 'HEAD',
+                url: fileUrl,
+                success: function (data, status, xhr) {
+                    // 从头信息中获取Content-Length字段
+                    var contentLength = xhr.getResponseHeader('Content-Length');
+
+                    // 将文件大小转换为适当的单位（如KB、MB、GB）
+                    var sizeInBytes = parseFloat(contentLength);
+                    var sizeInKB = sizeInBytes / 1024;
+                    var sizeInMB = sizeInKB / 1024;
+                    var sizeInGB = sizeInMB / 1024;
+
+                    // 显示文件大小信息
+                    var resultDiv = document.getElementById("result");
+                    resultDiv.innerHTML = "文件大小: " + sizeInBytes + " 字节, " + sizeInKB + " KB, " + sizeInMB + " MB, " + sizeInGB + " GB";
+                },
+                error: function (xhr, status, error) {
+                    // 显示错误信息
+                    var resultDiv = document.getElementById("result");
+                    resultDiv.innerHTML = "Error: Unable to fetch file information. Status code: " + xhr.status;
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>
